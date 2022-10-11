@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Enter name">
+    <button id="add">Add name</button>
+    <button id="print">print array</button>
+    <p id = "names"></p>
+   
+
+    <script>
+        let arr = [];
+        document.querySelector("#add").onclick = function(){
+            
+            arr.push(document.querySelector("input").value)
+            console.log(arr)
+
+
+        }
+        document.querySelector("#print").onclick =function(){
+            var delay =0;
+            arr.forEach(function (arr){
+                let a=""
+                setTimeout(function (){
+                    
+                    // a=a+arr
+                 
+                    document.querySelector("#names").innerHTML+=arr+",";
+                },1000 + delay);
+                delay +=1000;
+            
+            
+
+            });
+           
+            // document.querySelector("#reverse").innerHTML = arr
+        }
+
+        
+    </script>
+</body>
+</html>
